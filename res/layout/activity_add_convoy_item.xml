@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddConvoyItem" >
+
+    <TextView
+        android:id="@+id/lstTxtNomenclature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnSave"
+        android:layout_marginTop="15dp"
+        android:text="Nomenclature:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/inpTxtNomenclature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lstTxtNomenclature"
+        android:layout_below="@+id/lstTxtNomenclature"
+        android:ems="10" >
+    </EditText>
+
+    <!--  -->
+
+    <TextView
+        android:id="@+id/txtNSN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lstTxtNomenclature"
+        android:layout_below="@+id/inpTxtNomenclature"
+        android:layout_marginTop="15dp"
+        android:text="NSN / Part Number:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/inpTxtNSN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lstTxtNomenclature"
+        android:layout_below="@+id/txtNSN"
+        android:ems="10" >
+    </EditText>
+    <!--  -->
+
+    <TextView
+        android:id="@+id/txtVehicleID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lstTxtNomenclature"
+        android:layout_below="@+id/inpTxtNSN"
+        android:layout_marginTop="15dp"
+        android:text="Vehicle Identifier:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/inpTxtVehicleID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lstTxtNomenclature"
+        android:layout_below="@+id/txtVehicleID"
+        android:ems="10" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/txtNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lstTxtNomenclature"
+        android:layout_below="@+id/inpTxtVehicleID"
+        android:layout_marginTop="15dp"
+        android:text="Notes / Comments:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/inpTxtNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lstTxtNomenclature"
+        android:layout_below="@+id/txtNotes"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:lines="2" >
+    </EditText>
+
+    <Button
+        android:id="@+id/btnTakePicture"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lstTxtNomenclature"
+        android:layout_below="@+id/inpTxtNotes"
+        android:layout_marginTop="15dp"
+        android:text="Capture Image"
+         android:onClick="btnTakeImageClicked" 
+         />
+    
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+       	android:layout_centerInParent="true"
+        android:text="Add Item To Convoy"
+        android:onClick="btnSaveClicked" />
+
+    <ImageView
+        android:id="@+id/imgAddImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnTakePicture"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/btnSave"
+         />
+
+</RelativeLayout>
