@@ -36,6 +36,27 @@ public class dbHelper extends SQLiteOpenHelper {
 		// TODO Auto-generated method stub
 	}
 	
+	public static String itemsToHTMLTable(Context c){
+		dbHelper db = new dbHelper(c);
+		Cursor cur = db.getReadableDatabase().rawQuery("SELECT * FROM "+ ConvoyItem.Table.tableName, null);
+		ArrayList<ConvoyItem> all = new ArrayList<ConvoyItem>();
+		if(cur.moveToFirst()){
+			do{
+				all.add(new ConvoyItem(cur));
+			}while(cur.moveToNext());
+		}
+		//
+		String rowStr = "";
+		rowStr+=String.format("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>", "NAME","NSN","VEHICLE","NOTES");
+		for(ConvoyItem ci : all){
+			rowStr+=String.format("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>", ci.name,ci.nsn,ci.vehicleID,ci.notes);
+		}
+		//
+		db.close();
+		return String.format("<html><head></head><body><table>%s</table></body></html>", rowStr);
+	}
+	
+	
 	public static void clearAllItems(Context c){
 		dbHelper db = new dbHelper(c);
 		db.getWritableDatabase().delete(ConvoyItem.Table.tableName, null, null);

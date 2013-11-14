@@ -21,7 +21,6 @@ public class AddConvoyItem extends Activity {
 	public static String TAG = "AddConvoyItem";
 	public byte[] imageData = null;
 	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

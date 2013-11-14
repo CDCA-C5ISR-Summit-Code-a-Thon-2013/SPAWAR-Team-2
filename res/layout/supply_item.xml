@@ -5,9 +5,15 @@
 
     <ImageView
         android:id="@+id/lstImgItem"
+        android:src="@drawable/box"
+        android:layout_marginTop="10dp"
         android:layout_width="35dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true" />
+        android:maxHeight="50dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+         />
 
     <LinearLayout
         android:layout_width="wrap_content"

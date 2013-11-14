@@ -21,18 +21,22 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int box=0x7f020000;
+        public static final int ic_camera=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int ic_mrap=0x7f020003;
     }
     public static final class id {
-        public static final int action_ClearItems=0x7f080014;
+        public static final int action_ClearItems=0x7f080015;
         public static final int action_ClearItemsFromAddActivity=0x7f080010;
         public static final int action_GoToListView=0x7f08000f;
         public static final int action_addItem=0x7f080013;
         public static final int action_cancel=0x7f080012;
         public static final int action_delete_lstItem=0x7f080011;
+        public static final int action_emailItems=0x7f080014;
         public static final int btnSave=0x7f080001;
-        public static final int btnTakePicture=0x7f080009;
-        public static final int imgAddImage=0x7f08000a;
+        public static final int btnTakePicture=0x7f08000a;
+        public static final int imgAddImage=0x7f080009;
         public static final int inpTxtNSN=0x7f080004;
         public static final int inpTxtNomenclature=0x7f080002;
         public static final int inpTxtNotes=0x7f080008;

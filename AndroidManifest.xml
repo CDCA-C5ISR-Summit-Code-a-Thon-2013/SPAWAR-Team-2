@@ -11,12 +11,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/ic_mrap"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.convoyplanner.MainActivity"
-            android:label="View Convoy Items" >
+            android:label="Convoy Planner" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
